@@ -1,0 +1,74 @@
+// Import Google Font (Optional)
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+$primary-color: #007bff;
+$error-color: #ff4d4d;
+$border-radius: 5px;
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+
+  div {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: $border-radius;
+      font-size: 16px;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+        box-shadow: 0 0 5px rgba($primary-color, 0.5);
+      }
+
+      &.ng-invalid.ng-touched {
+        border-color: $error-color;
+      }
+    }
+
+    .error {
+      color: $error-color;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+  }
+
+  button {
+    width: 100%;
+    background: $primary-color;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+$primary-color: #007bff;
+$warning-color: #ff9800;
+$success-color: #4caf50;
+$error-color: #ff4d4d;
+$border-radius: 5px;
+
+.employee-count {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p-table {
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  th {
+    background-color: $primary-color;
+    color: white;
+    text-align: left;
+    padding: 12px;
+    font-weight: bold;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .editable-input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    font-size: 14px;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 5px rgba($primary-color, 0.5);
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+
+    button {
+      border-radius: $border-radius;
+      font-size: 13px;
+      padding: 5px 10px;
+    }
+
+    .p-button-warning {
+      background: $warning-color;
+      border: none;
+    }
+
+    .p-button-success {
+      background: $success-color;
+      border: none;
+    }
+  }
+}
